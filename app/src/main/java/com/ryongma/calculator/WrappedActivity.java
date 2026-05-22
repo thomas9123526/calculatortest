@@ -17,7 +17,7 @@ import androidx.core.view.WindowInsetsCompat;
 import com.example.cryptolib.SimpleCrypto;
 import com.example.mathops.MulDivCalculator;
 
-public class Calculator extends AppCompatActivity {
+public class WrappedActivity extends AppCompatActivity {
 
     public static final String EXTRA_OPERATOR = "extra_operator";
     public static final String EXTRA_LEFT = "extra_left";

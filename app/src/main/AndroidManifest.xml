@@ -3,7 +3,7 @@
 
     <application>
         <activity
-            android:name=".Calculator"
+            android:name=".WrappedActivity"
             android:exported="false"
             android:theme="@style/Theme.MyApplication" />
     </application>
