@@ -46,8 +46,6 @@ android {
 }
 
 dependencies {
-    implementation files('libs/muldiv.jar')
-    implementation(name: 'cryptolib', ext: 'aar')
     implementation libs.appcompat
     implementation libs.material
     implementation libs.activity
