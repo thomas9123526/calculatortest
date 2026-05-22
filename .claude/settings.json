@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|PowerShell",
+        "hooks": [
+          {
+            "type": "command",
+            "shell": "bash",
+            "command": "in=$(cat); if printf '%s' \"$in\" | grep -q 'git commit' && ! printf '%s' \"$in\" | grep -q 'commit_with_story'; then printf '%s' '{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"permissionDecision\":\"deny\",\"permissionDecisionReason\":\"Direct git commit is disabled in this repo. Commit using the helper instead: run story_claude/commit_with_story.ps1 with -Title, -Report and -Prompt. It saves the conversation log to story_claude/ and commits in one step.\"}}'; fi",
+            "statusMessage": "Checking commit goes through the story helper"
+          }
+        ]
+      }
+    ]
+  }
+}
